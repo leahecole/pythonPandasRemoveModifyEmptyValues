@@ -1,8 +1,21 @@
 
 # How-To Use Python to prepare data sets with missing values for Predix Studio
 ## Problem 
-Data sets are not perfect. Sometimes they end up with invalid, corrupt, or missing values. To [import data into Predix Studio using the data management workbench](https://bitstew.atlassian.net/wiki/spaces/GDDN/pages/101286250/Data+Management+Workbench), you cannot have any values that are null or empty. This How-To will walk you through writing a simple Python script to see if your data set has null or empty values, and if so, it will propose two options for how to modify your data to make it consumable by the Data Management Workbench.
+Data sets are not perfect. Sometimes they end up with invalid, corrupt, or missing values. To [import data into Predix Studio using the data management workbench](dmw), you cannot have any values that are null or empty. This How-To will walk you through writing a simple Python script to see if your data set has null or empty values, and if so, it will propose two options for how to modify your data to make it consumable by the Data Management Workbench.
 
+When I was [importing my data into Predix Studio using the data management workbench](dmw), I first noticed I had an error when I tried to learn the entities. This is indicated by the red "Learn Entities" and "Explore" cells, and the lack of Learned Unique Keys. 
+![Learn Entities failure in Data Management Workbench][noLearnedEntities]
+
+To explore the error, I went back to the Project Tab, where I looked at the Project logs.
+![Project log][projectLog]
+
+I double clicked on the error message, where I saw the Java error telling me I could not have null or empty values.
+![Null/empty error message in DMW project logs][errorMessage]
+
+[dmw]: https://bitstew.atlassian.net/wiki/spaces/GDDN/pages/101286250/Data+Management+Workbench 
+[errorMessage]: https://github.com/leahecole/pythonPandasRemoveModifyEmptyValues/blob/master/images/errorMessage.png
+[noLearnedEntities]: https://github.com/leahecole/pythonPandasRemoveModifyEmptyValues/blob/master/images/noLearnedEntities.png
+[projectLog]: https://github.com/leahecole/pythonPandasRemoveModifyEmptyValues/blob/master/images/projectLog.png
 ## Dependencies
 - [Python](https://www.python.org/downloads/)
 - [Python Data Analysis Library (Pandas) ](https://pandas.pydata.org/pandas-docs/stable/install.html#installing-from-pypi)
