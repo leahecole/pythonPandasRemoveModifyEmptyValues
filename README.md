@@ -20,6 +20,8 @@ I used [this](https://www.kaggle.com/usdot/flight-delays) kaggle data set to per
 ## Steps
 The following steps can be written in a Python script and run at once, but I find it more interesting to explore in an interactive Python shell like [iPython](https://ipython.org/)
 
+If you want to see what the scripts look like all together, please check out [Solution 1](https://github.com/leahecole/pythonPandasRemoveModifyEmptyValues/blob/master/solution1.py) and [Solution 2](https://github.com/leahecole/pythonPandasRemoveModifyEmptyValues/blob/master/solution2.py)
+
 1. Import pandas `import pandas as pd`
 2. Import csv into a Pandas [DataFrame](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html) object `flights = pd.read_csv('flights.csv')`
 3. Check the shape of your data in (rows, columns) format `flights.shape`
