@@ -35,12 +35,14 @@ At this point, you will either [replace your values with a space](#sol1) or [rem
 7. Fill all null or empty cells in your original DataFrame with an empty space and set that to a new DataFrame variable, here, called 'modifiedFlights'*. `modifiedFlights=flights.fillna(“ “)`
 8. Verify that you no longer have any null values by running `modifiedFlights.isnull().sum()`
 9. Save your modified dataset to a new CSV, replacing 'modifiedFlights.csv' with whatever you would like to name your new file. `modifiedFlights.to_csv('modifiedFlights.csv')`
+
 *If you wish, you can replace your original DataFrame, using `flights=flights.fillna(" ")`
 
 ### Solution 2: Remove rows with empty values <a id="sol2"></a>
 7. If there are only a few null values and you know that deleting values will not cause adverse effects on your result, remove them from your DataFrame and store that in a new DataFrame* `modifiedFlights = flights.dropna()`
 8. Verify that you no longer have any null values by running `modifiedFlights.isnull().sum()`
 9. Save your modified dataset to a new CSV, replacing 'modifiedFlights.csv' with whatever you would like to name your new file. `modifiedFlights.to_csv('modifiedFlights.csv')`
+
 *If you wish, you can replace your original DataFrame, using `flights=flights.dropna()`
 
 
