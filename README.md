@@ -1,12 +1,16 @@
-# How-To Use Python to prepare data sets with missing values for Predix Studio
+# How-To Use Python to Remove or Modify Empty Values in a CSV Dataset
 ## Problem 
 Data sets are not perfect. Sometimes they end up with invalid, corrupt, or missing values. For the project I was working on, I could not have any values that are null or empty. This How-To will walk you through writing a simple Python script to see if your data set has null or empty values, and if so, it will propose two options for how to modify your data.
 
-Here is an example of some data that has null/empty values. This simple data set shows you a flight and tells you its airline, flight number, and the reason it was cancelled. However, if a flight wasn't cancelled, it will have no cancelled reason.
+### Example
+This simple data set shows you a flight and tells you its airline, flight number, and the reason it was cancelled. However, if a flight wasn't cancelled, it will have no cancelled reason, and therefore has a null/empty value.
 
-Example of CSV missing data in excel:
+**Example of CSV missing data in excel** - there is no "Cancelled Reason" for AwesomeAir flight 456:
+![CSV with missing data in one cell](https://github.com/leahecole/pythonPandasRemoveModifyEmptyValues/blob/master/images/excel.png)
 
-Example of same CSV missing data in traditional comma-separated format
+
+**Example of same CSV missing data in traditional comma-separated format** - there is no "Cancelled Reason" for AwesomeAir flight 456:
+![csv in terminal with one value missing](https://github.com/leahecole/pythonPandasRemoveModifyEmptyValues/blob/master/images/csv.png) 
 
 
 ## Dependencies
@@ -19,7 +23,7 @@ Example of same CSV missing data in traditional comma-separated format
 - This can significantly increase the size of your data set, because you are adding values to it. With large data sets, the pandas commands can take time.
 - These may not be the best solutions for your data. For more information on other ways to handle missing data with pandas, please refer to [Handling missing data](https://pandas.pydata.org/pandas-docs/stable/missing_data.html)
 
-##Other Resources 
+## Other Resources 
 I used [this](https://www.kaggle.com/usdot/flight-delays) kaggle data set to perform these operations, and it includes some more instructions on using Pandas and other Python libraries to explore your data
 
 
