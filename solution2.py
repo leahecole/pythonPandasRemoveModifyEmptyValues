@@ -12,4 +12,4 @@ flights['TAXI_OUT'].isnull().sum()
 #Remove all null values
 flights=flights.dropna()
 #Store the dataframe as a new CSV
-flights.to_csv('new.csv')
+flights.to_csv('new.csv',index=False)

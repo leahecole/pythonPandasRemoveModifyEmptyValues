@@ -12,4 +12,4 @@ flights['TAXI_OUT'].isnull().sum()
 #Fill all null values with a space, and score that in the current data frame
 flights=flights.fillna(" ")
 #Store the dataframe as a new CSV
-flights.to_csv('new.csv')
+flights.to_csv('new.csv', index=False)
